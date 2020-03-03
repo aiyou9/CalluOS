@@ -27,6 +27,31 @@ export default new Router({
       component: () => import(/* webpackChunkName: "SettingPage" */ '@/layouts/SettingPage.vue'),
       children: [
         {
+          path: 'datainput',
+          component: () => import(/* webpackChunkName: "DataInput" */ '@/pages/ospages/DataInput.vue'),
+          name: 'datainput'
+        },
+        {
+          path: 'manuallabel',
+          component: () => import(/* webpackChunkName: "ManualLabel" */ '@/pages/ospages/ManualLabel.vue'),
+          name: 'manuallabel'
+        },
+        {
+          path: 'calludetect',
+          component: () => import(/* webpackChunkName: "CalluDetect" */ '@/pages/localdetect/CalluDetect.vue'),
+          name: 'calludetect'
+        },
+        {
+          path: 'dataconfig',
+          component: () => import(/* webpackChunkName: "DataConfig" */ '@/pages/ospages/DataConfig.vue'),
+          name: 'dataconfig'
+        },
+        {
+          path: 'testdb',
+          component: () => import(/* webpackChunkName: "TestDB" */ '@/pages/ospages/TestDB.vue'),
+          name: 'testdb'
+        },
+        {
           path: 'upload',
           component: () => import(/* webpackChunkName: "Upload" */ '@/pages/Upload.vue'),
           name: 'upload'

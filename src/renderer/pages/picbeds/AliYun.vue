@@ -118,7 +118,7 @@ export default class extends Vue {
     label
       line-height 22px
       padding-bottom 0
-      color #eee
+      color #000
     .el-input__inner
       border-radius 19px
     &-item
@@ -138,14 +138,14 @@ export default class extends Vue {
       border-left none
       border-radius 0 14px 14px 0
   .el-switch__label
-    color #eee
+    color #000
     &.is-active
       color #409EFF
   .el-icon-question
     font-size 20px
     float right
     margin-top 9px
-    color #eee
+    color #000
     cursor pointer
     transition .2s color ease-in-out
     &:hover

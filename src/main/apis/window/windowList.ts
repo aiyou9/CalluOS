@@ -26,9 +26,11 @@ windowList.set(IWindowList.TRAY_WINDOW, {
       show: false,
       frame: false,
       fullscreenable: false,
-      resizable: false,
+      // resizable: false,
+      resizable: true,
       transparent: true,
-      vibrancy: 'ultra-dark',
+      // vibrancy: 'ultra-dark',
+      vibrancy: 'light',
       webPreferences: {
         nodeIntegration: true,
         nodeIntegrationInWorker: true,
@@ -60,8 +62,9 @@ windowList.set(IWindowList.SETTING_WINDOW, {
       frame: true,
       center: true,
       fullscreenable: false,
-      resizable: false,
-      title: 'PicGo',
+      // resizable: false,
+      resizable: true,
+      title: 'CalluOS',
       vibrancy: 'ultra-dark',
       transparent: true,
       titleBarStyle: 'hidden',
@@ -75,7 +78,8 @@ windowList.set(IWindowList.SETTING_WINDOW, {
     if (process.platform !== 'darwin') {
       options.show = false
       options.frame = false
-      options.backgroundColor = '#3f3c37'
+      // options.backgroundColor = '#3f3c37'
+      options.backgroundColor = '#eee'
       options.transparent = false
       options.icon = `${__static}/logo.png`
     }
@@ -109,7 +113,8 @@ windowList.set(IWindowList.MINI_WINDOW, {
       frame: false,
       fullscreenable: false,
       skipTaskbar: true,
-      resizable: false,
+      // resizable: false,
+      resizable: true,
       transparent: process.platform !== 'linux',
       icon: `${__static}/logo.png`,
       webPreferences: {
@@ -142,7 +147,8 @@ windowList.set(IWindowList.RENAME_WINDOW, {
       width: 300,
       show: true,
       fullscreenable: false,
-      resizable: false,
+      // resizable: false,
+      resizable: true,
       vibrancy: 'ultra-dark',
       webPreferences: {
         nodeIntegration: true,
@@ -152,7 +158,8 @@ windowList.set(IWindowList.RENAME_WINDOW, {
     }
     if (process.platform !== 'darwin') {
       options.show = true
-      options.backgroundColor = '#3f3c37'
+      // options.backgroundColor = '#3f3c37'
+      options.backgroundColor = '#eee'
       options.autoHideMenuBar = true
       options.transparent = false
     }

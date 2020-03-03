@@ -6,7 +6,7 @@
     <el-row class="handle-bar" :class="{ 'cut-width': pluginList.length > 6 }">
       <el-input
         v-model="searchText"
-        placeholder="搜索npm上的PicGo插件，或者点击上方按钮查看优秀插件列表"
+        placeholder="搜索npm上的CalluOS插件，或者点击上方按钮查看优秀插件列表"
         size="small"
       >
         <i slot="suffix" class="el-input__icon el-icon-close" v-if="searchText" @click="cleanSearch" style="cursor: pointer"></i>

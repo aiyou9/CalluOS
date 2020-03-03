@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CallusOS.iml" filepath="$PROJECT_DIR$/.idea/CallusOS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CalluOS.iml" filepath="$PROJECT_DIR$/.idea/CalluOS.iml" />
     </modules>
   </component>
 </project>

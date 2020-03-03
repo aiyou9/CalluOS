@@ -18,21 +18,55 @@
           @select="handleSelect"
           :unique-opened="true"
           >
-          <el-menu-item index="upload">
+          <el-menu-item index="datainput">
             <i class="el-icon-upload"></i>
-            <span slot="title">上传区</span>
+            <span slot="title">创建项目</span>
           </el-menu-item>
-          <el-menu-item index="gallery">
-            <i class="el-icon-picture"></i>
-            <span slot="title">相册</span>
+          <el-menu-item index="manuallabel">
+            <i class="el-icon-upload"></i>
+            <span slot="title">人工标记</span>
           </el-menu-item>
           <el-submenu
-            index="sub-menu"
+                  index="sub-menu"
           >
             <template slot="title">
               <i class="el-icon-menu"></i>
-              <span>图床设置</span>
+              <span>AI识别</span>
             </template>
+            <el-submenu
+                    index="sub-menu1"
+            >
+              <template slot="title">
+                <i class="el-icon-menu"></i>
+                <span>本地AI识别</span>
+              </template>
+              <el-menu-item index="calludetect">
+                <i class="el-icon-picture"></i>
+                <span slot="title">愈伤检测</span>
+              </el-menu-item>
+            </el-submenu>
+          <el-submenu
+            index="sub-menu2"
+          >
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span>云端AI识别</span>
+            </template>
+            <el-menu-item index="upload">
+              <i class="el-icon-upload"></i>
+              <span slot="title">上传云端</span>
+            </el-menu-item>
+            <el-menu-item index="gallery">
+              <i class="el-icon-picture"></i>
+              <span slot="title">云端结果</span>
+            </el-menu-item>
+            <el-submenu
+                    index="sub-menu3"
+            >
+              <template slot="title">
+                <i class="el-icon-menu"></i>
+                <span>云端AI设置</span>
+              </template>
             <template
               v-for="item in picBed"
             >
@@ -46,9 +80,19 @@
               </el-menu-item>
             </template>
           </el-submenu>
+          </el-submenu>
+          </el-submenu>
+          <el-menu-item index="dataconfig">
+            <i class="el-icon-picture"></i>
+            <span slot="title">人工验证</span>
+          </el-menu-item>
+          <el-menu-item index="testdb">
+            <i class="el-icon-menu"></i>
+            <span slot="title">实验数据库</span>
+          </el-menu-item>
           <el-menu-item index="setting">
             <i class="el-icon-setting"></i>
-            <span slot="title">PicGo设置</span>
+            <span slot="title">CalluOS设置</span>
           </el-menu-item>
           <el-menu-item index="plugin">
             <i class="el-icon-share"></i>
@@ -148,7 +192,7 @@ const customLinkRule = (rule: string, value: string, callback: (arg0?: Error) =>
 })
 export default class extends Vue {
   version = process.env.NODE_ENV === 'production' ? pkg.version : 'Dev'
-  defaultActive = 'upload'
+  defaultActive = 'datainput'
   menu: Electron.Menu | null = null
   visible = false
   keyBindingVisible = false
@@ -209,14 +253,14 @@ export default class extends Vue {
         label: '关于',
         click () {
           dialog.showMessageBox({
-            title: 'PicGo',
-            message: 'PicGo',
+            title: 'CalluOS',
+            message: 'CalluOS',
             detail: `Version: ${pkg.version}\nAuthor: Molunerfinn\nGithub: https://github.com/Molunerfinn/PicGo`
           })
         }
       },
       {
-        label: '赞助PicGo',
+        label: '赞助CalluOS',
         click () {
           _this.visible = true
         }
@@ -278,7 +322,7 @@ $darwinBg = transparentify(#172426, #000, 0.7)
   &-leave-active
     transition all 100ms linear
 .view-title
-  color #eee
+  color #000
   font-size 20px
   text-align center
   margin 10px auto
@@ -288,7 +332,7 @@ $darwinBg = transparentify(#172426, #000, 0.7)
     height h = 22px
     width 100%
     text-align center
-    color #eee
+    color #000
     font-size 12px
     line-height h
     position fixed
@@ -346,11 +390,11 @@ $darwinBg = transparentify(#172426, #000, 0.7)
     background transparent
     width 170px
     &-item
-      color #eee
+      color #000
       position relative
       &:focus,
       &:hover
-        color #fff
+        color #000
         background transparent
       &.is-active
         color active-color = #409EFF
@@ -364,11 +408,11 @@ $darwinBg = transparentify(#172426, #000, 0.7)
           background active-color
   .el-submenu__title
     span
-      color #eee
+      color #000
     &:hover
       background transparent
       span
-        color #fff
+        color #000
   .el-submenu
     .el-menu-item
       min-width 166px

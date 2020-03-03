@@ -95,7 +95,7 @@ export default class extends Vue {
     label
       line-height 22px
       padding-bottom 0
-      color #eee
+      color #000
     .el-button-group
       width 100%
       .el-button
@@ -105,11 +105,11 @@ export default class extends Vue {
     .el-radio-group
       margin-left 25px
     .el-switch__label
-      color #eee
+      color #000
       &.is-active
         color #409EFF
   .notice
-    color #eee
+    color #000
     text-align center
     margin-bottom 10px
   .single

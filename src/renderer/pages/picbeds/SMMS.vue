@@ -43,5 +43,5 @@ export default class extends Vue {
   .content
     text-align center
     font-size 14px
-    color #eee
+    color #000
 </style>

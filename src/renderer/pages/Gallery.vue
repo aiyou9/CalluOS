@@ -364,7 +364,7 @@ export default class extends Vue {
 </script>
 <style lang='stylus'>
 .view-title
-  color #eee
+  color #000
   font-size 20px
   text-align center
   margin 10px auto
@@ -392,7 +392,7 @@ export default class extends Vue {
     &.active
       cursor pointer
       background #1B9EF3
-      color #fff
+      color #000
   &.delete
     cursor not-allowed
     background #F47466
@@ -444,7 +444,7 @@ export default class extends Vue {
         width 100%
         object-fit fill
     &__tool-panel
-      color #ddd
+      color #000
       i
         cursor pointer
         transition all .2s ease-in-out

@@ -111,7 +111,7 @@ export default class extends Vue {
     label
       line-height 22px
       padding-bottom 0
-      color #eee
+      color #000
     .el-input__inner
       border-radius 19px
   .el-radio-group

@@ -1,7 +1,7 @@
 <template>
   <div id="picgo-setting">
     <div class="view-title">
-      PicGo设置 - <i class="el-icon-document" @click="goConfigPage"></i>
+      CalluOS设置 - <i class="el-icon-document" @click="goConfigPage"></i>
     </div>
     <el-row class="setting-list">
       <el-col :span="15" :offset="4">
@@ -614,7 +614,7 @@ export default class extends Vue {
       label
         line-height 32px
         padding-bottom 0
-        color #eee
+        color #000
       .el-button-group
         width 100%
         .el-button
@@ -624,14 +624,14 @@ export default class extends Vue {
       .el-radio-group
         margin-left 25px
       .el-switch__label
-        color #eee
+        color #000
         &.is-active
           color #409EFF
       .el-icon-question
         font-size 20px
         float right
         margin-top 9px
-        color #eee
+        color #000
         cursor pointer
         transition .2s color ease-in-out
         &:hover

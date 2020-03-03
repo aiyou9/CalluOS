@@ -202,7 +202,7 @@ export default class extends Vue {
 <style lang='stylus'>
   #mini-page
     background #409EFF
-    color #FFF
+    color #e6f1fe
     height 100vh
     width 100vw
     border-radius 50%
@@ -213,7 +213,7 @@ export default class extends Vue {
     background-position center center
     background-repeat no-repeat
     position relative
-    border 4px solid #fff
+    border 3px solid #e6f1fe
     box-sizing border-box
     cursor pointer
     &.linux

@@ -16,3 +16,5 @@ docs/dist/
 .env.local
 .env.*.local
 dist_electron/
+/.idea/sonarlint/
+!/.idea/sonarlint/

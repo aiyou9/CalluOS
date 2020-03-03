@@ -179,9 +179,9 @@ export default class extends Vue {
       color: #67C23A
   .el-table
     background-color: transparent
-    color #ddd
+    color #2e2e2e
     thead
-      color #bbb
+      color #000
     th,tr
       background-color: transparent
     &__body
@@ -192,5 +192,5 @@ export default class extends Vue {
       .el-table__body
         tr:hover
           &>td
-            background #333
+            background #6f6f6f
 </style>

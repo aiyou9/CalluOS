@@ -128,7 +128,7 @@ export default {
     label
       line-height 22px
       padding-bottom 0
-      color #eee
+      color #000
     .el-button-group
       width 100%
       .el-button
@@ -138,14 +138,14 @@ export default {
     .el-radio-group
       margin-left 25px
     .el-switch__label
-      color #eee
+      color #000
       &.is-active
         color #409EFF
     .el-icon-question
       font-size 20px
       float right
       margin-top 9px
-      color #eee
+      color #000
       cursor pointer
       transition .2s color ease-in-out
       &:hover
